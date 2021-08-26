@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.LiveCoronaData">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            tools:ignore="MissingConstraints">
+            <ImageView
+                android:id="@+id/bgCorona"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@color/colorBackground" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/map"
+                android:layout_marginBottom="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"/>
+
+        </FrameLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/bg_corona"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/imgPositif"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            app:srcCompat="@drawable/icon_positif" />
+        <LinearLayout
+            android:id="@+id/lnPositif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imgPositif"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kasus Positif"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:id="@+id/tvPositif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="positif"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:textSize="25sp"
+                android:textColor="@color/colorPositif"/>
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/imgSembuh"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/icon_sembuh"
+            android:layout_below="@+id/imgPositif"
+            />
+
+        <LinearLayout
+            android:id="@+id/lnSembuh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imgSembuh"
+            android:layout_below="@id/lnPositif"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kasus Sembuh"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:id="@+id/tvSembuh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sembuh"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:textSize="25sp"
+                android:textColor="@color/colorSembuh"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgMeninggal"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/imgSembuh"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/icon_meninggal" />
+        <LinearLayout
+            android:id="@+id/lnMeninggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imgSembuh"
+            android:layout_below="@id/lnSembuh"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kasus Meninggal"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:id="@+id/tvMeninggal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="meninggal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:textSize="25sp"
+                android:textColor="@color/colorMeninggal"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/imgMeninggal">
+
+
+            <TextView
+
+                android:id="@+id/tvcorona"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Coronavirus Cases"
+                android:textSize="25sp"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="50dp"
+                android:layout_below="@+id/imgSembuh"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tvpr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="data by province"
+                    android:layout_marginLeft="50dp"
+                    android:textSize="15sp"/>
+                <TextView
+                    android:id="@+id/tvDetailsProv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/detail"
+                    android:clickable="true"
+                    android:layout_marginLeft="100dp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
