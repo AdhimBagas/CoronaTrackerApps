@@ -25,6 +25,12 @@ public class SimpstompData {
                     "Batuk Kering",
                     "https://raw.githubusercontent.com/AdhimBagas/coronaLiveResource/master/caugh.png",
                     "Mengalami batuk kering tidak berdahak selama berhari-hari"
+            },
+
+            {
+                "Kantong Kering",
+                    "https://raw.githubusercontent.com/AdhimBagas/coronaLiveResource/master/caugh.png",
+                    "Mengalami Kekurangan uang yang berlebihan"
             }
     };
 
